@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root{
+
+    --dark-cyan: hsl(185, 75%, 39%);
+    --desaturated-blue: hsl(229, 23%, 23%);
+    --grayish-blue: hsl(227, 10%, 46%);
+    --dark-gray: hsl(0, 0%, 59%);
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 18px;
+    color: var(--desaturated-blue);
+}
+.main{
+    background-color: var(--dark-cyan);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    min-height: 100vh;
+    
+}
+.top,
+.bottom{
+    position: absolute;
+}
+.top{
+    transform: translate(-35%, -55%);
+}
+.bottom{
+    bottom: 0;
+    right: 0;
+    transform: translate(40%, 65%);
+}
+.container{
+    background: hsl(0, 0%, 100%);
+    text-align: center;
+    max-width: 350px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.card-head{
+    height: 150px;
+    width: 350px;
+    background: url(./images/bg-pattern-card.svg);
+    background-size: cover;
+}
+.img-sec{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: -50px auto -50px auto;
+    border: 5px solid hsl(0, 0%, 100%);
+}
+.img-sec img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.card-body{
+    margin-top: 54px;
+    margin-bottom: -75px;
+    height: 250px;
+    line-height: 1.8rem;
+}
+.card-body .name{
+    font-size: 1.4rem;
+}
+.card-body .city{
+    margin-top: 10px;
+}
+.card-body .age, .card-body .city{
+    font-weight: 300;
+    font-size: 1.1rem;
+    color: var(--dark-gray);
+}
+.activity-section{
+    padding-top: 22px;
+    padding-right: 40px;
+    border-top: 1px solid hsl(0, 10%, 88%);
+    padding-left: 40px;
+    margin-top: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.activity-section .act{
+    display: block;
+    font-weight: 300;
+    font-size: .9rem;
+    color: var(--dark-gray);
+    letter-spacing: .1rem;
+}
+@media screen and (max-width: 500px){
+    .top{
+        transform: translate(-80%, -55%);
+    }
+    .bottom{
+        transform: translate(90%, 55%);
+        
+    }
+}
